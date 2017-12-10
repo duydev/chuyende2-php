@@ -20,6 +20,7 @@ class DB {
 			return false;
 		}
 
+		self::$conn->query("SET NAMES utf8");
 		return self::$conn;
 	}
 

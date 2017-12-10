@@ -14,17 +14,19 @@ if( ! empty( $products ) && is_array( $products ) ) {
 				<div class="thumb">
 					<img src="<?php echo $product['picture']; ?>" alt="">	
 				</div>
-				<div class="title">
-					<?php echo  $product['productName']; ?>
-				</div>
-				<div class="desc">
-					<?php echo $product['description']; ?>
-				</div>
-				<div class="price">
-					<?php echo  $product['price']; ?>
-				</div>
-				<div class="quantity">
-					<?php echo  $product['quantity']; ?>
+				<div class="info-wrapper">
+					<div class="title">
+						<?php echo  $product['productName']; ?>
+					</div>
+					<div class="desc">
+						<?php echo $product['description']; ?>
+					</div>
+					<div class="price">
+						<?php echo number_format( floatval( $product['price'] ) ); ?> VNĐ
+					</div>
+					<div class="quantity">
+						<?php echo  $product['quantity']; ?>
+					</div>
 				</div>
 			</div>
 			<?php
