@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 25px 0 15px 0
+}
+
+h2 {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.row {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.lbltitle {
+	width: 20%;
+	float: left;
+}
+
+.lblinput, .lbloutput {
+	width: 80%;
+	float: left;
+}
+
+.submit {
+	padding: 10px 0;
+	text-align: center;
+	width: 50%;
+}
+
+.message {
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 20px;
+}
+
+.message.fail {
+	background: red;
+}
+
+.message.success {
+	background: green;
+}
+
+.products-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.products-wrapper .item {
+	position: relative;
+	width: 20%;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	vertical-align: text-top;
+}
+
+.products-wrapper .item:hover {
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.products-wrapper .item img {
+	width: 80%;
+}
+
+.products-wrapper .item .info-wrapper {
+	padding: 10px;
+}
+
+.products-wrapper .item .info-wrapper .title {
+	color: blue;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 10px
+}
+
+.products-wrapper .item .info-wrapper .desc {
+	margin-bottom: 10px;
+}
+
+.products-wrapper .item .info-wrapper .price {
+	color: red;
+	text-align: right;
+}
+
+.products-wrapper .item .info-wrapper .quantity {
+	color: green;
+	text-align: right;
+}
