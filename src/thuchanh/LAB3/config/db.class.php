@@ -36,6 +36,7 @@ class DB {
 		if ( $conn ) {
 			$res = $conn->query( $query );
 			$conn->close();
+			self::$conn = null;
 
 			return $res;
 		}

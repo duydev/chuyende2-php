@@ -1,5 +1,5 @@
 <?php
-require_once '../config/db.class.php';
+require_once realpath( './config/db.class.php' );
 
 class Product {
 
@@ -22,8 +22,7 @@ class Product {
 	 * @param $description
 	 * @param $picture
 	 */
-	public function __construct( $productID, $productName, $catID, $price, $quantity, $description, $picture ) {
-		$this->productID   = $productID;
+	public function __construct( $productName, $catID, $price, $quantity, $description, $picture ) {
 		$this->productName = $productName;
 		$this->catID       = $catID;
 		$this->price       = $price;
@@ -44,6 +43,16 @@ class Product {
 		('$this->productID', '$this->catID', '$this->productName', '$this->price', '$this->quantity', '$this->description', '$this->picture')";
 
 		$res = $db->execute_query( $query );
+
+		return $res;
+	}
+
+	public static function list_products() {
+		$db = new DB();
+
+		$query = "SELECT * FROM product";
+
+		$res = $db->select_to_array( $query );
 
 		return $res;
 	}

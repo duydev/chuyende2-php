@@ -1,13 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>
+<?php require_once 'header.php' ?>
+	<ul class="menu">
+		<li>
+			<a href="./list_product.php">Danh sách sản phẩm</a>
+		</li>
+		<li>
+			<a href="./add_product.php">Thêm sán phẩm</a>
+		</li>
+	</ul>
+<?php require_once 'footer.php' ?>
