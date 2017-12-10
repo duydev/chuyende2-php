@@ -11,7 +11,8 @@ $_GET['username']  = 'snoopy0877';
  */
 echo $_POST['username'] , '<br>';
 echo $_GET['username'] , '<br>';
-echo @$_REQUEST['username'] , '<br><hr>'; // Dòng này có vẻ sai với PHP, không tồn tại giá trị này và PHP quăng ra Notice.
+// $_REQUEST chỉ lấy $_GET và $_POST lúc runtime. Cách gán ở trên không có tác dụng với $_REQUEST
+echo @$_REQUEST['username'] , '<br><hr>';
 
 /**
  * Thử gán ngược lại giá trị cho $_REQUEST['username']
