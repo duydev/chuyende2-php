@@ -51,7 +51,7 @@ $categories = Category::list_category();
 				<div class="price"><?php echo number_format( floatval( $product['price'] ) ); ?> VNĐ</div>
 				<div class="desc"><?php echo nl2br( $product['description'] ); ?></div>
 				<div class="btn-buy">
-					<button class="btn btn-primary">Mua Hàng</button>
+					<a href="shopping_cart.php?prodID=<?php echo $product['productID']; ?>" class="btn btn-primary">Mua Hàng</a>
 				</div>
 			</div>
 		</div>

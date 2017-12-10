@@ -57,7 +57,7 @@ require_once 'header.php';
 							</div>
 						</div>
 						<div class="btn-buy text-center">
-							<a href="product_detail.php?prodID=<?php echo $product['productID']; ?>" class="btn btn-primary">Mua Hàng</a>
+							<a href="shopping_cart.php?prodID=<?php echo $product['productID']; ?>" class="btn btn-primary">Mua Hàng</a>
 						</div>
 					</div>
 					<?php
@@ -68,5 +68,4 @@ require_once 'header.php';
 	</div>
 </div>
 <?php	
-
 require_once 'footer.php' ?>
