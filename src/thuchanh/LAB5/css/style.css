@@ -29,10 +29,6 @@ h2 {
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.products-wrapper .item img {
-	width: 80%;
-}
-
 .products-wrapper .item .info-wrapper {
 	padding: 10px;
 }

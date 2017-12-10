@@ -86,4 +86,14 @@ class Product {
 		return $res;
 	}
 
+	public static function get_related_product( $catID, $id ) {
+		$db = new DB();
+
+		$query = "SELECT * FROM product WHERE catID=$catID AND productID <> $id";
+
+		$res = $db->select_to_array( $query );
+
+		return $res;
+	}
+
 }
