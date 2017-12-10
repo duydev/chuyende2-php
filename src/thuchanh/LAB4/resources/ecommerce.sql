@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2017 at 08:59 AM
+-- Generation Time: Dec 10, 2017 at 09:45 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `picture` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`productID`),
   KEY `catID` (`catID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `product`
@@ -99,7 +99,8 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`productID`, `catID`, `productName`, `price`, `quantity`, `description`, `picture`) VALUES
 (14, 3, 'Smart Tivi Toshiba 55 inch 55U7650', 20900000, 100, 'Công nghệ CEVO 4K Engine cho chất lượng hình ảnh cao nhất Tấm nền IPS đảm bảo vẻ đẹp nguyên vẹn của nội dung hiển thị Công nghệ tăng cường màu sắc Full Color Gamut Giao diện My Home Screen cùng nhiều tiện ích hấp dẫn ', 'images/tivi-1.jpg'),
 (15, 3, 'Smart Tivi Toshiba 55 inch 55U7650', 20900000, 100, 'Công nghệ CEVO 4K Engine cho chất lượng hình ảnh cao nhất Tấm nền IPS đảm bảo vẻ đẹp nguyên vẹn của nội dung hiển thị Công nghệ tăng cường màu sắc Full Color Gamut Giao diện My Home Screen cùng nhiều tiện ích hấp dẫn ', 'images/tivi-1.jpg'),
-(16, 3, 'Smart Tivi Toshiba 55 inch 55U7650', 20900000, 100, 'Công nghệ CEVO 4K Engine cho chất lượng hình ảnh cao nhất Tấm nền IPS đảm bảo vẻ đẹp nguyên vẹn của nội dung hiển thị Công nghệ tăng cường màu sắc Full Color Gamut Giao diện My Home Screen cùng nhiều tiện ích hấp dẫn ', 'images/tivi-1.jpg');
+(16, 3, 'Smart Tivi Toshiba 55 inch 55U7650', 20900000, 100, 'Công nghệ CEVO 4K Engine cho chất lượng hình ảnh cao nhất Tấm nền IPS đảm bảo vẻ đẹp nguyên vẹn của nội dung hiển thị Công nghệ tăng cường màu sắc Full Color Gamut Giao diện My Home Screen cùng nhiều tiện ích hấp dẫn ', 'images/tivi-1.jpg'),
+(19, 4, 'Tủ Lạnh Mini Aqua AQR-95AR (90L) - Bạc', 2499000, 100, '\r\n\r\nTiết kiệm điện năng\r\n\r\nThiết kế gọn gàng, đẹp mắt\r\n\r\nDễ dàng di chuyển, lắp đặt\r\n\r\nLàm lạnh nhanh chóng\r\n\r\nKhay ngăn thiết kế linh hoạt, tiện ích\r\n\r\nPhù hợp với người độc thân, sinh viên, nhà ít người\r\n', 'uploads/151289390052396_aqr95arss.u600.d20160801.t215522.jpg');
 
 --
 -- Constraints for dumped tables
