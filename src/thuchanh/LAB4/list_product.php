@@ -6,11 +6,11 @@ require_once 'header.php';
 $products = Product::list_products();
 if( ! empty( $products ) && is_array( $products ) ) {
 	?>
-	<div class="products-wrapper">
+	<div class="row products-wrapper">
 		<?php
 		foreach ( $products as $product ) {
 			?>
-			<div class="item">
+			<div class="item col-md-3 col-xs-12">
 				<div class="thumb">
 					<img src="<?php echo $product['picture']; ?>" alt="">	
 				</div>
@@ -27,6 +27,9 @@ if( ! empty( $products ) && is_array( $products ) ) {
 					<div class="quantity">
 						<?php echo  $product['quantity']; ?>
 					</div>
+				</div>
+				<div class="btn-buy text-center">
+					<a href="#" class="btn btn-primary">Mua Hàng</a>
 				</div>
 			</div>
 			<?php

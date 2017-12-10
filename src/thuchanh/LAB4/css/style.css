@@ -19,62 +19,8 @@ h2 {
 	font-weight: bold;
 }
 
-#wrapper {
-	width: 80%;
-	margin: 0 auto;
-}
-
-.row {
-	width: 100%;
-	display: inline-block;
-	margin-bottom: 5px;
-}
-
-.lbltitle {
-	width: 20%;
-	float: left;
-}
-
-.lblinput, .lbloutput {
-	width: 80%;
-	float: left;
-}
-
-.submit {
-	padding: 10px 0;
-	text-align: center;
-	width: 50%;
-}
-
-.message {
-	color: white;
-	text-align: center;
-	font-weight: bold;
-	margin: 20px;
-}
-
-.message.fail {
-	background: red;
-}
-
-.message.success {
-	background: green;
-}
-
-.products-wrapper {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 25px;
-}
-
-.products-wrapper .item {
-	position: relative;
-	width: 20%;
-	display: inline-block;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	vertical-align: text-top;
+.products-wrapper .item:hover {
+	padding-bottom: 20px;
 }
 
 .products-wrapper .item:hover {
@@ -110,4 +56,9 @@ h2 {
 .products-wrapper .item .info-wrapper .quantity {
 	color: green;
 	text-align: right;
+}
+
+header h2 {
+	display: block;
+	text-align: center;
 }
