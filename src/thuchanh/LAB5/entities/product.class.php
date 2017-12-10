@@ -66,4 +66,14 @@ class Product {
 		return $res;
 	}
 
+	public static function list_products_by_cat_id( $catID ) {
+		$db = new DB();
+
+		$query = "SELECT * FROM product WHERE catID=$catID";
+
+		$res = $db->select_to_array( $query );
+
+		return $res;
+	}
+
 }
