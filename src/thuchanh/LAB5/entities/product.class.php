@@ -76,4 +76,14 @@ class Product {
 		return $res;
 	}
 
+	public static function get_product( $id ) {
+		$db = new DB();
+
+		$query = "SELECT * FROM product WHERE productID=$id";
+
+		$res = $db->select_to_array( $query );
+
+		return $res;
+	}
+
 }

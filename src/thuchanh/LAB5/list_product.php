@@ -2,8 +2,6 @@
 require_once realpath( './entities/product.class.php' );
 require_once realpath( './entities/category.class.php' );
 
-require_once 'header.php';
-
 if( isset( $_GET['catID'] ) ) {
 	$products = Product::list_products_by_cat_id( intval( $_GET['catID'] ) );
 } else {
@@ -11,6 +9,7 @@ if( isset( $_GET['catID'] ) ) {
 }
 $categories = Category::list_category();
 
+require_once 'header.php';
 ?>
 <div class="row text-center">
 	<div class="col-md-3">
@@ -37,11 +36,15 @@ $categories = Category::list_category();
 					?>
 					<div class="item col-md-3 col-xs-12">
 						<div class="thumb">
-							<img src="<?php echo $product['picture']; ?>" alt="">	
+							<a href="product_detail.php?prodID=<?php echo $product['productID']; ?>">
+								<img src="<?php echo $product['picture']; ?>" alt="">
+							</a>	
 						</div>
 						<div class="info-wrapper">
 							<div class="title">
-								<?php echo  $product['productName']; ?>
+								<a href="product_detail.php?prodID=<?php echo $product['productID']; ?>">
+									<?php echo  $product['productName']; ?>
+								</a>
 							</div>
 							<div class="desc">
 								<?php echo nl2br( $product['description'] ); ?>
@@ -54,7 +57,7 @@ $categories = Category::list_category();
 							</div>
 						</div>
 						<div class="btn-buy text-center">
-							<a href="#" class="btn btn-primary">Mua Hàng</a>
+							<a href="product_detail.php?prodID=<?php echo $product['productID']; ?>" class="btn btn-primary">Mua Hàng</a>
 						</div>
 					</div>
 					<?php
