@@ -65,7 +65,9 @@ require_once 'header.php';
 				} else {
 					foreach ( $_SESSION['cart'] as $item) {
 						$product = Product::get_product( $item['prodID'] );
+
 						if( $product ) {
+							$product = $product[0];
 							?>
 							<tr>
 								<td><?php echo $product['productName'] ?></td>
