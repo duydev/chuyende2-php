@@ -25,6 +25,7 @@
 			</tr>
 		</table>
 	</form>
+	<script type="text/javascript" src="/LAB9/js/jquery-3.2.1.min.js"></script>
 	<script>
 		var xmlHttp;
 
