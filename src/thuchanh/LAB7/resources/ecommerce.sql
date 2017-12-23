@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2017 at 08:09 PM
+-- Generation Time: Dec 23, 2017 at 08:44 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -113,8 +113,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Username` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `Email` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `Password` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`UserID`),
+  UNIQUE KEY `Username` (`Username`),
+  UNIQUE KEY `Email` (`Email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Constraints for dumped tables

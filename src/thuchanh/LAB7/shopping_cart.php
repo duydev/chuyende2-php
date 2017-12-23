@@ -1,5 +1,4 @@
 <?php 
-session_start();
 require_once realpath( './entities/product.class.php' );
 require_once realpath( './entities/category.class.php' );
 
@@ -66,6 +65,7 @@ require_once 'header.php';
 					foreach ( $_SESSION['cart'] as $item) {
 						$product = Product::get_product( $item['prodID'] );
 						if( $product ) {
+							$product = $product[0];
 							?>
 							<tr>
 								<td><?php echo $product['productName'] ?></td>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,6 +16,17 @@
 		<header>
 			<div class="container">
 				<h2>Project trainning - Xây dựng Website bán hàng</h2>
+				<?php 
+				if( ! empty( $_SESSION['user'] ) ) {
+					?>
+					<h3>Xin chào <?php echo $_SESSION['user']; ?> | <a href="./logout.php">Đăng xuất</a></h3>
+					<?php
+				} else {
+					?>
+					<h3>Bạn chưa đăng nhập. <a href="./login.php">Đăng nhập</a> - <a href="./register.php">Đăng ký</a></h3>
+					<?php
+				}
+				?>
 				<nav class="navbar navbar-default">
 				   <div class="container-fluid">
 				      <!-- Brand and toggle get grouped for better mobile display -->
