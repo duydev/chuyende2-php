@@ -1,6 +1,7 @@
 <?php 
 require_once realpath( './entities/product.class.php' );
 require_once realpath( './entities/category.class.php' );
+require_once 'header.php';
 
 $categories = Category::list_category();
 
@@ -17,14 +18,13 @@ if( isset( $_GET['prodID'] ) ) {
 				$founded = 1;
 			}
 		}
-		if( ! founded ) {
+		if( ! $founded ) {
 			$_SESSION['cart'][] = [ 'prodID' => $_GET['prodID'], 'quantity' => 1 ];
 		}
 	}
 	header("Location: shopping_cart.php");
 } 
 
-require_once 'header.php';
 ?>
 <div class="row text-center">
 	<div class="col-md-3">
