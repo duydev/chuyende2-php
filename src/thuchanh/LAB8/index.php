@@ -10,6 +10,12 @@
 <body>
 	<form action="" method="POST" enctype="multipart/form-data">
 		<table>
+			<?php 
+			$num_rows = 7;
+			for ($i = 0; $i < $num_rows; $i++) {
+				
+			}
+			?>
 			<tr>
 				<td>Choose file for upload:</td>
 				<td><input type="file" name="file" id=""></td>

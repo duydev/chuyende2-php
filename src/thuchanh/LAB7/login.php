@@ -13,9 +13,9 @@ if( ! empty( $_POST ) ) {
 	$uname = ! empty( $_POST['txtname'] ) ? $_POST['txtname']: '';
 	$upass = ! empty( $_POST['txtpass'] ) ? $_POST['txtpass']: '';
 
-	$acc = new User( $uname, $uemail, $upass );
+	$acc = new User();
 	$res = $acc->checkLogin( $uname, $upass );
-	if( $res ) {
+	if( $res && $res->num_rows > 0 ) {
 		// case success
 		$_SESSION['user'] = $uname;
 		header("Location: index.php");
